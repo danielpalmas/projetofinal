@@ -23,7 +23,8 @@ storageEngine = function() {
 			{
 				
 				tipo="POST";
-				url = "http://localhost:8080/projetofinal/task/create";
+				//url = "http://localhost:8080/projetofinal/task/create";
+				url = "http://dfs6-projetofinal.herokuapp.com/task/create";
 				contentType = false;
 				dataType = false;
 				$form.find("#id").val("");
@@ -46,8 +47,8 @@ storageEngine = function() {
 				
 				tipo="PUT";
 				
+				//url = "http://dfs6-projetofinal.herokuapp.com/task/edit";
 				url = "http://localhost:8080/projetofinal/task/edit";
-				
 				//data = JSON.stringify($('form').serializeArray());
 				contentType: "application/json; charset=utf-8"
 				dataType: "json"
@@ -87,7 +88,10 @@ storageEngine = function() {
 		},
 		findAll : function(type, successCallback, errorCallback) {
 			$.ajax({
-			    url: "/projetofinal/task/list",
+				
+			    url: "http://dfs6-projetofinal.herokuapp.com/task/list",
+			    
+			    //url: "/projetofinal/task/list",
 			    dataType: "json",
 			    type: "GET",
 				processData: false,  // tell jQuery not to process the data
@@ -120,7 +124,9 @@ storageEngine = function() {
 		},
 		delete : function(type, id, successCallback, errorCallback) {
 			$.ajax({
-			    url: "/projetofinal/task/delete",
+				
+			    url: "http://dfs6-projetofinal.herokuapp.com/task/delete",
+			    //url: "/projetofinal/task/delete",
 			    type: "DELETE",
 			    data: JSON.stringify({id: id}),
 				processData: false,  // tell jQuery not to process the data
@@ -137,7 +143,9 @@ storageEngine = function() {
 		},
 		findById : function (type, id, successCallback, errorCallback) {
 			$.ajax({
-			    url: "/projetofinal/task/get/"+id,
+				
+			    //url: "/projetofinal/task/get/"+id,
+			    url: "http://dfs6-projetofinal.herokuapp.com/task/get/"+id,
 			    dataType: "json",
 			    type: "GET",
 				processData: false,  // tell jQuery not to process the data
