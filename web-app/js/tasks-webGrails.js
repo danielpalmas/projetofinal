@@ -47,8 +47,8 @@ storageEngine = function() {
 				
 				tipo="PUT";
 				
-				//url = "http://dfs6-projetofinal.herokuapp.com/task/edit";
-				url = "http://localhost:8080/projetofinal/task/edit";
+				url = "http://dfs6-projetofinal.herokuapp.com/task/edit";
+				//url = "http://localhost:8080/projetofinal/task/edit";
 				//data = JSON.stringify($('form').serializeArray());
 				contentType: "application/json; charset=utf-8"
 				dataType: "json"
